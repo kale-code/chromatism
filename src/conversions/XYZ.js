@@ -17,11 +17,9 @@ export default {
     // [ Shamelessly stolen off Wikipedia ]
     let M = getTransform('INVERSE_SRGB_XYZ')
 
-    let linear = M.map((m) => {
-      return normalized.reduce((acc, v, key) => {
+    let linear = M.map((m) => normalized.reduce((acc, v, key) => {
         return (m[key] * v) + acc
-      }, 0)
-    })
+      }, 0))
 
     let [ r, g, b ] = linear.map((C) => {
       if (C <= 0.0031308) {
