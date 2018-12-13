@@ -9,7 +9,7 @@ export default function fade (amount, fromRef, toRef) {
   var colours = [ fromColour ]
   amount = amount - 1
 
-  var rDiff = (toColour.r - fromColour.r) / (amount)
+  const rDiff = (toColour.r - fromColour.r) / (amount);
   var gDiff = (toColour.g - fromColour.g) / (amount)
   var bDiff = (toColour.b - fromColour.b) / (amount)
   var colour = { r: fromColour.r, g: fromColour.g, b: fromColour.b }
