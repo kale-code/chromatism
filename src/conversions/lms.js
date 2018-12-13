@@ -7,11 +7,9 @@ export default {
     // Inverse Bradford Transformation
     const Mbi = getTransform('INVERSE_BRADFORD')
 
-    const resultArray = Mbi.map((m) => {
-      return valueArray.reduce((acc, v, key) => {
+    const resultArray = Mbi.map((m) => valueArray.reduce((acc, v, key) => {
         return (m[key] * v) + acc
-      }, 0)
-    })
+      }, 0))
 
     return {
       X: resultArray[0] * 100,
