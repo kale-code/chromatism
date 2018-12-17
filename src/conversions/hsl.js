@@ -3,7 +3,7 @@ import negativeModulo from '../helpers/negative-modulo'
 export default {
   rgb: value => {
     if (value.s === 0) {
-      const grey = (value.l / 100) * 255;
+      var grey = (value.l / 100) * 255
       return {
         r: grey,
         g: grey,
