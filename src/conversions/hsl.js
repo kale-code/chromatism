@@ -18,7 +18,7 @@ export default {
       }
       tempTwo = (2 * (value.l / 100)) - tempOne
       tempHue = value.h / 360
-      const tempR = (tempHue + 0.333) % 1;
+      var tempR = (tempHue + 0.333) % 1
       var tempG = tempHue
       var tempB = negativeModulo((tempHue - 0.333), 1)
       var r, g, b
