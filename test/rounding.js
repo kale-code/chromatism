@@ -10,9 +10,7 @@ export default function round (inp, step) {
   if (typeof inp === 'object') {
     out = {}
     for (let key in inp) {
-      if (inp.hasOwnProperty(key)) {
-        out[key] = applyFactor(inp[key], factor)
-      }
+      out[key] = applyFactor(inp[key], factor)
     }
   } else if (typeof inp === 'number') {
     out = applyFactor(inp, factor)
