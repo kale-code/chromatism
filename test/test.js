@@ -7,7 +7,6 @@ import * as chroma from '../src/operations'
 
 describe('Conversion', () => {
   for (let fromKey in consts.red) {
-  if (consts.red.hasOwnProperty(fromKey)) {
     if (!consts.red.hasOwnProperty(fromKey)) {
       continue
     }
@@ -38,7 +37,6 @@ describe('Conversion', () => {
       })
     }
   }
-}
 })
 
 function close (numberA, numberB) {
